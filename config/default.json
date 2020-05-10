@@ -1,0 +1,29 @@
+{
+  "host": "localhost",
+  "port": 3000,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "entity": "users",
+    "service": "api/user",
+    "secret": "zH4saxQaFPT5aLVjnjwYS0WLROM=",
+    "authStrategies": ["jwt", "local"],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  },
+  "mongodb": "mongodb+srv://eliteaddy:adeshile@cluster0-ufp8b.mongodb.net/green-test?retryWrites=true"
+}

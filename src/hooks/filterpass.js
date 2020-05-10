@@ -5,7 +5,7 @@
 module.exports = (options = {}) => {
   return async (context) => {
     if (context.result) {
-      context.result = { result: context.result };
+      context.result = { result: context.result, success: true };
     }
     // console.log(context.result);
 
